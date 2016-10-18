@@ -39,11 +39,11 @@
   }
 
   @include mq-md {
-    width: $device-sm - 22px;
+    width: $device-md - 22px;
   }
 
   @include mq-lg {
-    width: $device-sm - 30px;
+    width: $device-md - 30px;
   }
 }
 

@@ -43,13 +43,13 @@
 
 @media (min-width: 1200px) and (max-width: 1440px) {
   .inner-container {
-    width: 678px;
+    width: 1178px;
   }
 }
 
 @media (min-width: 1440px) {
   .inner-container {
-    width: 670px;
+    width: 1170px;
   }
 }
 
