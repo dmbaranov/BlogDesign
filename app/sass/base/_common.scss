@@ -1,0 +1,7 @@
+.outer-container {
+  @include container-fluid;
+}
+
+.inner-container {
+  @include container;
+}

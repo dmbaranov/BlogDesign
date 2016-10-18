@@ -1,0 +1,46 @@
+.footer-container {
+  min-height: 6vh;
+  display: flex;
+
+  background: $footer-color;
+}
+
+.footer {
+  padding: 70px 0;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer__section {
+  color: white;
+  text-align: center;
+
+  @include col-xs-8;
+}
+
+.footer__section__header {
+  color: $footer-section-header-color;
+  font-weight: bold;
+  font-size: 15px;
+  text-transform: uppercase;
+}
+
+.footer__section__content--text-section {
+  text-align: left;
+}
+
+.footer__section__content--list-section {
+  padding: 0;
+
+  background: red;
+}
+
+.footer__section__content__list {
+  list-style: none;
+  text-align: left;
+}
+
+.footer__section__content__list li {
+  border-bottom: 1px solid white;
+}

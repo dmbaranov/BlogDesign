@@ -1,0 +1,23 @@
+.navigation-container {
+  min-height: 6vh;
+  display: flex;
+
+  background: $nav-bar-color;
+}
+
+.nav-bar {
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  @include col-xs-24;
+}
+
+.nav-bar a {
+  color: $nav-bar-links;
+}
+
+.nav-bar--active-link {
+  color: $nav-bar-active-link !important;
+}
