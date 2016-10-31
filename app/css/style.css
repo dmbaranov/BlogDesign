@@ -1,3 +1,31 @@
+@font-face {
+  font-family: Arimo;
+  font-style: italic;
+  font-weight: 400;
+  src: local("Arimo Italic"),local(Arimo-Italic),url(//fonts.gstatic.com/s/arimo/v9/thDv13z50gThh9VG9EA2iA.eot?#) format("eot"),url(//fonts.gstatic.com/s/arimo/v9/GYkAnzJvKnl5kOgLY6RO-w.woff2) format("woff2"),url(//fonts.gstatic.com/s/arimo/v9/8ezAIdgyp-Cm5_X7mWzP_g.woff) format("woff");
+}
+
+@font-face {
+  font-family: Arimo;
+  font-style: italic;
+  font-weight: 700;
+  src: local("Arimo Bold Italic"),local(Arimo-BoldItalic),url(//fonts.gstatic.com/s/arimo/v9/_K7sg-ijHdmkwPzV9FiqaFQlYEbsez9cZjKsNMjLOwM.eot?#) format("eot"),url(//fonts.gstatic.com/s/arimo/v9/_K7sg-ijHdmkwPzV9FiqaPk_vArhqVIZ0nv9q090hN8.woff2) format("woff2"),url(//fonts.gstatic.com/s/arimo/v9/_K7sg-ijHdmkwPzV9FiqaBsxEYwM7FgeyaSgU71cLG0.woff) format("woff");
+}
+
+@font-face {
+  font-family: Arimo;
+  font-style: normal;
+  font-weight: 400;
+  src: local(Arimo),url(//fonts.gstatic.com/s/arimo/v9/kJziZB9mN1Zz67hE4Xj10w.eot?#) format("eot"),url(//fonts.gstatic.com/s/arimo/v9/HNu4Nzh6q8Es60EMNZhs9w.woff2) format("woff2"),url(//fonts.gstatic.com/s/arimo/v9/wZLYhRRxZWGToTRP78bqJQ.woff) format("woff");
+}
+
+@font-face {
+  font-family: Arimo;
+  font-style: normal;
+  font-weight: 700;
+  src: local("Arimo Bold"),local(Arimo-Bold),url(//fonts.gstatic.com/s/arimo/v9/5Pu1hU3bOP0NyOZx3DCeVvesZW2xOQ-xsNqO47m55DA.eot?#) format("eot"),url(//fonts.gstatic.com/s/arimo/v9/27rE5lMk9EHpLbxiIuGd0PesZW2xOQ-xsNqO47m55DA.woff2) format("woff2"),url(//fonts.gstatic.com/s/arimo/v9/UnXpojilM3XslYxUnWuVe_esZW2xOQ-xsNqO47m55DA.woff) format("woff");
+}
+
 .___col-common,
 .nav-bar,
 .content,
@@ -5,6 +33,7 @@
 .content__header__big,
 .content__header__small,
 .content__posts,
+.footer__sections,
 .footer__section,
 .footer__copyright,
 .footer__copyright__block,
@@ -61,7 +90,7 @@
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  background: #212121;
+  background: #272d33;
 }
 
 .nav-bar {
@@ -84,7 +113,9 @@
 }
 
 .nav-bar a {
-  color: #a7a9ac;
+  font-family: "Arimo", sans-serif;
+  color: #a9abad;
+  font-weight: bold;
 }
 
 .nav-bar--active-link {
@@ -137,7 +168,7 @@
 
 .content-container {
   min-height: 94vh;
-  background: #424242;
+  background: #323a41;
 }
 
 .content {
@@ -161,6 +192,7 @@
 .content__header {
   position: relative;
   margin: 70px 0;
+  font-family: "Arimo", sans-serif;
   opacity: 0;
   -webkit-animation: contentHeader ease-in 1;
   animation: contentHeader ease-in 1;
@@ -190,7 +222,7 @@
 .content__header__small {
   font-size: 15px;
   text-align: center;
-  color: #a7a9ac;
+  color: #a9abad;
   text-transform: uppercase;
   font-weight: bold;
   -webkit-flex-basis: 100%;
@@ -222,7 +254,7 @@
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  background: #212121;
+  background: #272d33;
 }
 
 .footer {
@@ -238,6 +270,25 @@
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
+  font-family: "Arimo", sans-serif;
+}
+
+.footer__sections {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-flex-basis: 100%;
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 100%;
+  max-width: 100%;
 }
 
 .footer__section {
@@ -249,7 +300,16 @@
   max-width: 33.33333333%;
 }
 
+div.footer__section:first-of-type {
+  text-align: left;
+}
+
+div.footer__section ~ div:last-of-type {
+  text-align: right;
+}
+
 .footer__section__header {
+  padding-bottom: 40px;
   color: #ffffff;
   font-weight: bold;
   font-size: 15px;
@@ -271,6 +331,10 @@
   padding: 10px 0;
   text-decoration: none;
   border-bottom: 1px dotted #444D52;
+}
+
+.footer__section__content__list li:first-child {
+  padding-top: 0;
 }
 
 .footer__section__content__list li:last-child {
@@ -304,6 +368,7 @@
 .post {
   margin-bottom: 50px;
   padding-bottom: 45px;
+  font-family: "Arimo", sans-serif;
   background: #ffffff;
   -webkit-flex-basis: 100%;
   -ms-flex-preferred-size: 100%;
@@ -325,7 +390,7 @@
 
 .post__header__date {
   margin-top: 15px;
-  color: #b0b0b0;
+  color: #b0b1b1;
   font-size: 15px;
   text-transform: uppercase;
   text-align: center;

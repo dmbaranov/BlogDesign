@@ -2,7 +2,7 @@
   min-height: 6vh;
   display: flex;
 
-  background: $nav-bar-color;
+  background: $shark;
 }
 
 .nav-bar {
@@ -15,9 +15,11 @@
 }
 
 .nav-bar a {
-  color: $nav-bar-links;
+  font-family: $font-main;
+  color: $boombay;
+  font-weight: bold;
 }
 
 .nav-bar--active-link {
-  color: $nav-bar-active-link !important;
+  color: $white !important;
 }

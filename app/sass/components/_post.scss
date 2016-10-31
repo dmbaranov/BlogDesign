@@ -2,7 +2,9 @@
   margin-bottom: 50px;
   padding-bottom: 45px;
 
-  background: $post-content-background;
+  font-family: $font-main;
+
+  background: $white;
 
   @include col-xs-24;
 }
@@ -19,7 +21,7 @@
 .post__header__date {
   margin-top: 15px;
 
-  color: $post-date-color;
+  color: $edward;
   font-size: 15px;
   text-transform: uppercase;
   text-align: center;
