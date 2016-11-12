@@ -20,24 +20,69 @@
 
     @include col-xs-8;
 
-    div.&:first-of-type {
-      background: red;
+    &:first-of-type {
+      text-align: left;
     }
 
-    // div:&:first-of-type {
-    //   text-align: left;
-    //
-    //   background: red;
-    // }
+    & ~ div:last-of-type {
+      text-align: right;
+    }
+
+    &__header {
+      padding: 40px 0;
+
+      color: $white;
+      font-weight: bold;
+      font-size: 15px;
+      text-transform: uppercase;
+    }
+
+    &__content {
+      &__list {
+        margin: 0;
+
+        list-style: none;
+        text-align: left;
+
+        & li {
+          margin: 0;
+          padding: 10px 0;
+
+          text-decoration: none;
+
+          border-bottom: 1px dotted #444D52;
+
+          &:first-child {
+              padding-top: 0;
+          }
+
+          &:last-child {
+            border-bottom: 0;
+          }
+        }
+      }
+    }
   }
-}
 
-div.main-footer__section:first-of-type {
-  text-align: left;
-  background: red;
-}
+  &__copyright {
+    margin-top: 30px;
 
-div.main-footer__section ~ div:last-of-type {
-  text-align: right;
-  background: blue;
+    display: flex;
+
+    color: white;
+
+    @include col-xs-24;
+
+    &__block {
+      @include col-xs-12;
+    }
+  }
+
+  & .--text-section {
+    text-align: left;
+  }
+
+  & .--links {
+    text-align: right;
+  }
 }
