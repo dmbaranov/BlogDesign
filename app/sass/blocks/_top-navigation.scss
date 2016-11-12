@@ -1,0 +1,27 @@
+.top-navigation {
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  @include col-xs-24;
+
+  &__container {
+    min-height: 6vh;
+    display: flex;
+
+    background: $shark;
+  }
+
+  &__item {
+    & a {
+      font-family: $font-main;
+      color: $boombay;
+      font-weight: bold;
+    }
+
+    & .--active-link {
+      color: $white !important;
+    }
+  }
+}

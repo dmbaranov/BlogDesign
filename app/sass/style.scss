@@ -3,8 +3,7 @@
 
 @import "base/_common.scss";
 
-@import "layout/_top.scss";
-@import "layout/_content.scss";
-@import "layout/_footer.scss";
-
-@import "components/_post.scss";
+@import "blocks/_top-navigation.scss";
+@import "blocks/_main-content.scss";
+@import "blocks/_post.scss";
+@import "blocks/_main-footer.scss";

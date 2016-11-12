@@ -1,0 +1,43 @@
+.main-footer {
+  &__container {
+    min-height: 6vh;
+    display: flex;
+
+    background: $shark;
+  }
+
+  &__sections {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    @include col-xs-24;
+  }
+
+  &__section {
+    color: white;
+    text-align: center;
+
+    @include col-xs-8;
+
+    div.&:first-of-type {
+      background: red;
+    }
+
+    // div:&:first-of-type {
+    //   text-align: left;
+    //
+    //   background: red;
+    // }
+  }
+}
+
+div.main-footer__section:first-of-type {
+  text-align: left;
+  background: red;
+}
+
+div.main-footer__section ~ div:last-of-type {
+  text-align: right;
+  background: blue;
+}

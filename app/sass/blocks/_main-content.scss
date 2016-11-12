@@ -1,0 +1,88 @@
+@keyframes contentHeader {
+  from {
+    opacity: 0;
+    top: 80px;
+  } to {
+    opacity: 1;
+    top: 0px;
+  }
+}
+
+@keyframes contentPost {
+  from {
+    opacity: 0;
+  } to {
+    opacity: 1;
+  }
+}
+
+.main-content {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  @include col-xs-24;
+
+  &__container {
+    min-height: 94vh;
+
+    background: $outer-space;
+  }
+
+  &__header {
+    position: relative;
+    margin: 70px 0;
+
+    height: 150px;
+
+    font-family: $font-main;
+
+    opacity: 0;
+
+    animation: contentHeader ease-in 1;
+    animation-fill-mode: forwards;
+    animation-duration: 1s;
+    animation-delay: 0.3s;
+
+    @include col-xs-24;
+
+    &__big {
+      margin-bottom: 20px;
+
+      font-size: 46px;
+      text-align: center;
+      color: $white;
+
+      @include col-xs-24;
+    }
+
+    &__small {
+      font-size: 15px;
+      text-align: center;
+      color: $boombay;
+      text-transform: uppercase;
+      font-weight: bold;
+
+      @include col-xs-24;
+    }
+  }
+
+  &__posts {
+    position: relative;
+
+    opacity: 0;
+
+    animation: contentPost ease-in 1;
+    animation-fill-mode: forwards;
+    animation-duration: 1s;
+    animation-delay: 0.5s;
+
+    @include col-xs-24;
+  }
+
+  &__read-more {
+    margin-top: 15px;
+
+    text-align: center;
+  }
+}
