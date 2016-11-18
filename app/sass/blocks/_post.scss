@@ -54,4 +54,58 @@
 
     text-align: center;
   }
+  
+  &__footer {
+    margin-top: 50px;
+    
+    @include col-xs-20;
+    @include col-xs-offset-2; 
+    
+    &__item {
+      position: relative;
+      
+      padding: 8px 0;
+      
+      color: $dusty-gray;
+      
+      &.--author:before {
+        position: absolute;
+        top: 5px;
+        left: -25px;
+        
+        width: 10px;
+        height: 10px;
+        
+        background: red;
+        
+        content: "";
+      }
+      
+      &.--date:before {
+        position: absolute;
+        top: 5px;
+        left: -25px;
+        
+        width: 10px;
+        height: 10px;
+        
+        background: green;
+        
+        content: "";
+      }
+      
+      &.--tags:before {
+        position: absolute;
+        top: 5px;
+        left: -25px;
+        
+        width: 10px;
+        height: 10px;
+        
+        background: blue;
+        
+        content: "";
+      }
+    }
+  }
 }

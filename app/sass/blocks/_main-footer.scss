@@ -1,4 +1,6 @@
 .main-footer {
+  padding: 75px 0;
+  
   &__container {
     min-height: 6vh;
     display: flex;
@@ -62,6 +64,35 @@
         }
       }
     }
+    
+    &__search {
+      margin: 30px 0;
+      
+      display: flex;
+      
+      &__field {
+        padding: 8px 10px;
+        
+        font-size: 16px;
+        
+        border: 0;
+        
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+      }
+      
+      &__button {
+        padding: 10px 10px;
+        
+        font-size: 14px;
+        text-transform: uppercase;
+        font-family: $font-main;
+        
+        background: $slate-gray;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+      }
+    }
   }
 
   &__copyright {
@@ -75,6 +106,37 @@
 
     &__block {
       @include col-xs-12;
+      
+      &__link {
+        position: relative;
+        margin: 0 20px;
+        
+        &.--twitter::before {
+          position: absolute;
+          top: 3px;
+          left: -15px;
+          
+          width: 10px;
+          height: 10px;
+          
+          background: red;
+          
+          content: "";
+        }
+        
+        &.--facebook::before {
+          position: absolute;
+          top: 3px;
+          left: -15px;
+          
+          width: 10px;
+          height: 10px;
+          
+          background: blue;
+          
+          content: "";
+        }
+      }
     }
   }
 
